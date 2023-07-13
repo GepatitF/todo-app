@@ -2,9 +2,11 @@ import Todo from "./Todo";
 import { Button } from "./Button/Button";
 import { Box } from "./Box/Box";
 
+import "../styles/TodoListStyles.css";
+
 export const TodoList = ({ toDoList, handleToggle, handleFilter }) => {
   return (
-    <Box>
+    <Box className="todo-list-container">
       {toDoList.map((todo) => {
         return (
           <Todo

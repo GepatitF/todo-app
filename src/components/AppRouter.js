@@ -6,7 +6,9 @@ import { TodoListScreen } from "./TodoListScreen";
 export const AppRouter = () => {
   return (
     <Box className="app-router">
-      <Routes></Routes>
+      <Routes>
+        <Route path="/" element={<TodoListScreen />} />
+      </Routes>
     </Box>
   );
 };

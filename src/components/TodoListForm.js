@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Input } from "./Input/Input";
 import { Button } from "./Button/Button";
 
+import "../styles/TodoListFormStyles.css";
+
 export const TodoListForm = ({ addTask }) => {
   const [todo, setTodo] = useState("");
 
@@ -16,7 +18,7 @@ export const TodoListForm = ({ addTask }) => {
     setTodo("");
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="todo-list-form-container" onSubmit={handleSubmit}>
       <Input
         onKeyDown={(e) => e.key === "Enter" && setTodo(todo)}
         value={todo}
